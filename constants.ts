@@ -47,7 +47,7 @@ export const TRANSLATIONS: Record<string, Translation> = {
   en: {
     hero: {
       badge: "FIND THE BEST CANDIDATES WITHIN HOURS",
-      title: "Svi izvori talenata. Jedna platforma.",
+      title: "All talent sources. One platform.",
       subtitle: "We search every corner of the internet – from job boards to hidden channels – to find experts who perfectly match your needs. Faster, smarter, and more comprehensive.",
       ctaPrimary: "FIND NOW",
       ctaSecondary: "Book a 15-min call",
@@ -214,7 +214,7 @@ export const TRANSLATIONS: Record<string, Translation> = {
   sl: {
     hero: {
       badge: "NAJDITE NAJBOLJŠE KANDIDATE V NEKAJ URAH",
-      title: "Svi izvori talenata. Jedna platforma.",
+      title: "Vsi viri talentov. Ena platforma.",
       subtitle: "Preiščemo vsak kotiček interneta – od borz dela do skritih kanalov – da najdemo strokovnjake, ki popolnoma ustrezajo vašim potrebam. Hitreje, pametneje in celoviteje.",
       ctaPrimary: "NAJDI ZDAJ",
       ctaSecondary: "Rezervirajte klic",
@@ -576,7 +576,7 @@ export const TRANSLATIONS: Record<string, Translation> = {
   de: {
     hero: {
       badge: "FINDEN SIE DIE BESTEN KANDIDATEN IN WENIGEN STUNDEN",
-      title: "Svi izvori talenata. Jedna platforma.",
+      title: "Alle Talentquellen. Eine Plattform.",
       subtitle: "Wir durchsuchen jeden Winkel des Internets – von Jobbörsen bis zu versteckten Kanälen – um Experten zu finden, die perfekt zu Ihren Anforderungen passen. Schneller, intelligenter und umfassender.",
       ctaPrimary: "JETZT FINDEN",
       ctaSecondary: "Gespräch buchen",
