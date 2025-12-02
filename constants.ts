@@ -39,7 +39,7 @@ export const COMPANY_LOGOS = [
   "https://presse.oebb.at/.resources/corp-2016/themes/images/logo-oebb-og.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Voestalpine.svg/2560px-Voestalpine.svg.png",
   "https://logos-world.net/wp-content/uploads/2022/04/Rewe-Symbol.png",
-  "https://cdn.imgbin.com/18/18/12/imgbin-ina-d-d-rijeka-sisak-logo-brand-others-yXNdtNAyauegaF2tQbxGEyaeB.jpg",
+  "https://upload.wikimedia.org/wikipedia/en/a/aa/INA_d.d._logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Spar-logo.svg/2560px-Spar-logo.svg.png"
 ];
 

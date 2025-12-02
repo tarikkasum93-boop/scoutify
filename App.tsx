@@ -729,12 +729,12 @@ const App: React.FC = () => {
               
               {/* Dual-layer text for depth */}
               <div className="relative z-10">
-                <span className="absolute top-1 left-1 md:top-2 md:left-2 text-gray-900/5 select-none -z-10 text-6xl md:text-9xl font-black blur-[1px]">
+                <span className="absolute top-1 left-1 md:top-1 md:left-1 text-gray-900/5 select-none -z-10 text-4xl md:text-5xl font-black blur-[1px]">
                   {t.features.title}
                 </span>
                 
                 <motion.h2 
-                  className="text-6xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-indigo-600 pb-4 relative z-10 drop-shadow-sm tracking-tight"
+                  className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-indigo-600 pb-4 relative z-10 drop-shadow-sm tracking-tight"
                   animate={{
                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                   }}
