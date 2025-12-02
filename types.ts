@@ -1,4 +1,4 @@
-export type Language = 'en' | 'sl' | 'hr';
+export type Language = 'en' | 'sl' | 'hr' | 'de';
 
 export interface Translation {
   hero: {
@@ -9,7 +9,7 @@ export interface Translation {
     ctaSecondary: string;
     stats: {
       companies: string;
-      professionals: string;
+      hired: string;
       matchRate: string;
       faster: string;
     };
@@ -112,6 +112,11 @@ export interface Translation {
       message: { label: string; placeholder: string; };
     };
     submit: string;
+    sending: string;
+    success: {
+      title: string;
+      message: string;
+    };
     back: string;
   };
   footer: {

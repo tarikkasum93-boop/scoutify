@@ -22,24 +22,38 @@ import {
   ArrowLeft,
   Send,
   Lock,
-  FileCheck
+  FileCheck,
+  Loader2
 } from 'lucide-react';
 
 export const ICONS = {
-  Target, BrainCircuit, Users, Zap, FileText, Search, MessageSquare, BarChart3, Globe2, ShieldCheck, Layout, UserCheck, Clock, TrendingUp, CheckCircle2, XCircle, Phone, Mail, Briefcase, ArrowLeft, Send, Lock, FileCheck
+  Target, BrainCircuit, Users, Zap, FileText, Search, MessageSquare, BarChart3, Globe2, ShieldCheck, Layout, UserCheck, Clock, TrendingUp, CheckCircle2, XCircle, Phone, Mail, Briefcase, ArrowLeft, Send, Lock, FileCheck, Loader2
 };
+
+export const COMPANY_LOGOS = [
+  "https://www.span.eu/media/tlghawiq/square-sava-1.png",
+  "https://logodix.com/logo/871029.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/KRKA_Logo.svg/2560px-KRKA_Logo.svg.png",
+  "https://getlogo.net/wp-content/uploads/2021/08/mercator-group-logo-vector.png",
+  "https://static.vecteezy.com/system/resources/previews/020/190/509/non_2x/mcdonalds-logo-mcdonald-icon-free-free-vector.jpg",
+  "https://presse.oebb.at/.resources/corp-2016/themes/images/logo-oebb-og.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Voestalpine.svg/2560px-Voestalpine.svg.png",
+  "https://logos-world.net/wp-content/uploads/2022/04/Rewe-Symbol.png",
+  "https://cdn.imgbin.com/18/18/12/imgbin-ina-d-d-rijeka-sisak-logo-brand-others-yXNdtNAyauegaF2tQbxGEyaeB.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Spar-logo.svg/2560px-Spar-logo.svg.png"
+];
 
 export const TRANSLATIONS: Record<string, Translation> = {
   en: {
     hero: {
       badge: "FIND THE BEST CANDIDATES WITHIN HOURS",
-      title: "All talent sources. One platform.",
+      title: "Svi izvori talenata. Jedna platforma.",
       subtitle: "We search every corner of the internet – from job boards to hidden channels – to find experts who perfectly match your needs. Faster, smarter, and more comprehensive.",
       ctaPrimary: "FIND NOW",
       ctaSecondary: "Book a 15-min call",
       stats: {
         companies: "Companies",
-        professionals: "Professionals",
+        hired: "Hired",
         matchRate: "Match Rate",
         faster: "Faster",
       }
@@ -184,6 +198,11 @@ export const TRANSLATIONS: Record<string, Translation> = {
         message: { label: "Message", placeholder: "How can we help?" }
       },
       submit: "Send Message",
+      sending: "Sending...",
+      success: {
+        title: "Message Sent!",
+        message: "Thank you for reaching out. We'll get back to you shortly."
+      },
       back: "Back to Home"
     },
     footer: {
@@ -195,13 +214,13 @@ export const TRANSLATIONS: Record<string, Translation> = {
   sl: {
     hero: {
       badge: "NAJDITE NAJBOLJŠE KANDIDATE V NEKAJ URAH",
-      title: "Vsi viri talentov. Ena platforma.",
+      title: "Svi izvori talenata. Jedna platforma.",
       subtitle: "Preiščemo vsak kotiček interneta – od borz dela do skritih kanalov – da najdemo strokovnjake, ki popolnoma ustrezajo vašim potrebam. Hitreje, pametneje in celoviteje.",
       ctaPrimary: "NAJDI ZDAJ",
       ctaSecondary: "Rezervirajte klic",
       stats: {
         companies: "Podjetij",
-        professionals: "Strokovnjakov",
+        hired: "Zaposlenih",
         matchRate: "Ujemanje",
         faster: "Hitreje",
       }
@@ -261,7 +280,7 @@ export const TRANSLATIONS: Record<string, Translation> = {
     },
     about: {
       text1: "Scoutify je zaposlitvena platforma, zgrajena za izboljšanje izkušnje za vse - pomaga ekipam delati hitreje in pošteno.",
-      text2: "Scoutify združuje interese delodajalca in kandidata. Brez kompromisov. Preizkušen pristop, ki s hitrostjo in učinkovitostjo prinaša zadovoljstvo delodajalcu in kandidatu."
+      text2: "Scoutify združuje interese delodajalca in kandidata. Bez kompromisov. Preizkušen pristop, ki s hitrostjo in učinkovitostjo prinaša zadovoljstvo delodajalcu in kandidatu."
     },
     modular: {
       title: "Modularne funkcije",
@@ -346,6 +365,11 @@ export const TRANSLATIONS: Record<string, Translation> = {
         message: { label: "Sporočilo", placeholder: "Kako vam lahko pomagamo?" }
       },
       submit: "Pošlji sporočilo",
+      sending: "Pošiljanje...",
+      success: {
+        title: "Sporočilo poslano!",
+        message: "Hvala, ker ste nas kontaktirali. Kmalu vam bomo odgovorili."
+      },
       back: "Nazaj domov"
     },
     footer: {
@@ -363,7 +387,7 @@ export const TRANSLATIONS: Record<string, Translation> = {
       ctaSecondary: "Rezervirajte poziv",
       stats: {
         companies: "Tvrtki",
-        professionals: "Stručnjaka",
+        hired: "Zaposlenih",
         matchRate: "Podudaranje",
         faster: "Brže",
       }
@@ -535,12 +559,184 @@ export const TRANSLATIONS: Record<string, Translation> = {
         subject: { label: "Predmet", placeholder: "O čemu se radi?" },
         message: { label: "Poruka", placeholder: "Kako vam možemo pomoći?" }
       },
-      submit: "Pošalji poruku",
+      submit: "Pošlji poruku",
+      sending: "Slanje...",
+      success: {
+        title: "Poruka poslana!",
+        message: "Hvala što ste nas kontaktirali. Javit ćemo vam se uskoro."
+      },
       back: "Povratak na naslovnu"
     },
     footer: {
       rights: "Scoutify. Sva prava pridržana.",
       privacy: "Politika privatnosti",
+      contact: "Kontakt"
+    }
+  },
+  de: {
+    hero: {
+      badge: "FINDEN SIE DIE BESTEN KANDIDATEN IN WENIGEN STUNDEN",
+      title: "Svi izvori talenata. Jedna platforma.",
+      subtitle: "Wir durchsuchen jeden Winkel des Internets – von Jobbörsen bis zu versteckten Kanälen – um Experten zu finden, die perfekt zu Ihren Anforderungen passen. Schneller, intelligenter und umfassender.",
+      ctaPrimary: "JETZT FINDEN",
+      ctaSecondary: "Gespräch buchen",
+      stats: {
+        companies: "Unternehmen",
+        hired: "Vermittelt",
+        matchRate: "Trefferquote",
+        faster: "Schneller",
+      }
+    },
+    whyChoose: {
+      title: "Warum uns für Ihre Talentakquise wählen?",
+      description: "Wir sind nicht nur eine Plattform; wir sind eine umfassende KI-Powerhouse, die als Ihre präzisionszielende Marketingmaschine, erstklassige Sourcing-Firma und Full-Stack-Vetting-Spezialist agiert – alles in einem."
+    },
+    features: {
+      title: "KI-Vorteil",
+      f1: { title: "Präzisions-Werbekampagnen", desc: "Wir erstellen und setzen hyper-gezielte Kampagnen ein, die genau die Fachkräfte erreichen, die Sie benötigen." },
+      f2: { title: "Intelligente Vetting-Quizze", desc: "Unsere KI generiert sofort dynamische Bewertungen, die speziell auf Ihre Stellenanzeige zugeschnitten sind." },
+      f3: { title: "Vorqualifizierter Talentpool", desc: "Hören Sie auf, Zeit mit der Überprüfung hunderter irrelevanter Bewerbungen zu verschwenden. Unser System prüft jeden Experten vorab." },
+      f4: { title: "Beschleunigte Zeit bis zur Einstellung", desc: "Reduzieren Sie Ihre Einstellungszeit um Wochen. Unser optimierter, KI-gesteuerter Prozess sorgt dafür, dass Sie Top-Kandidaten schneller treffen." }
+    },
+    process: {
+      title: "Der Prozess",
+      subtitle: "Intelligentere Talentakquise. Wir verwandeln eine monatelange Suche in einen nahtlosen, schnellen Prozess.",
+      steps: [
+        { title: "Job-Blueprint einreichen", desc: "Teilen Sie uns Ihre Anforderungen mit. Geben Sie Rollendetails, erforderliche Fähigkeiten und Unternehmenskultur an." },
+        { title: "KI startet gezielte Kampagnen", desc: "Unsere Plattform analysiert Ihren Blueprint und erstellt sofort optimierte Kampagnen mit hoher Konversionsrate." },
+        { title: "Erstellung benutzerdefinierter Bewertungen", desc: "Die KI erstellt und implementiert automatisch ein validiertes Quiz und einen Fragebogen zur Messung der Fachkompetenz." },
+        { title: "Erhalten Sie geprüfte Talente", desc: "Nur Fachkräfte, die die strenge Bewertung bestehen, kommen durch. Sie erhalten eine kuratierte Liste von Kandidaten." }
+      ]
+    },
+    comparison: {
+      title: "Warum Scoutify?",
+      scoutify: {
+        label: "Scoutify",
+        items: [
+          "Schnelle Bewerbung (< 1 Min)",
+          "5-10x mehr qualifizierte Bewerbungen",
+          "Automatisches Bewertungssystem",
+          "Scoutify 'Turnkey'-Ansatz",
+          "24/7 Support"
+        ]
+      },
+      others: {
+        label: "Andere Jobbörsen",
+        items: [
+          "Langer Prozess, der zum Verlust von Kandidaten führt",
+          "Unbefriedigende Anzahl und Qualität der Bewerbungen",
+          "Kandidatenliste ohne Vorqualifikation",
+          "Keine Hilfe im weiteren Prozess",
+          "Eingeschränkter Support"
+        ]
+      },
+      stats: "180+ Arbeitgeber in 8 Ländern",
+      cta: {
+        title: "Starten Sie die Einstellung - senden Sie eine Anfrage oder rufen Sie uns sofort an",
+        btnPrimary: "Anfrage senden"
+      },
+      quote: {
+        text: "Eine Jobbörse, die Kandidaten nutzen wollen, ist eine Jobbörse, mit der Arbeitgeber zufrieden sind. Scoutify verbindet die Interessen von Arbeitgeber und Kandidat. Keine Kompromisse.",
+        subtext: "Bewährter Ansatz, der Arbeitgeber und Kandidat mit Geschwindigkeit und Effizienz zufriedenstellt."
+      }
+    },
+    about: {
+      text1: "Scoutify ist eine Einstellungsplattform, die entwickelt wurde, um die Erfahrung für alle zu verbessern - und Einstellungsteams dabei zu helfen, schneller und fairer zu arbeiten.",
+      text2: "Scoutify verbindet die Interessen von Arbeitgeber und Kandidat. Keine Kompromisse. Bewährter Ansatz, der Arbeitgeber und Kandidat mit Geschwindigkeit und Effizienz zufriedenstellt."
+    },
+    modular: {
+      title: "Modulare Funktionen",
+      items: [
+        { title: "Detaillierte Stellenbeschreibungen", desc: "Erstellen Sie klare, überzeugende Rollen in Sekunden." },
+        { title: "Lebenslauf-Screening", desc: "Heben Sie sofort die bestpassenden Kandidaten hervor." },
+        { title: "Interviewfragen", desc: "Generieren Sie schnell maßgeschneiderte, rollenspezifische Fragen." },
+        { title: "Interview-Analyse", desc: "Erfassen Sie Erkenntnisse und Leistung automatisch." }
+      ]
+    },
+    whyXyz: {
+      title: "Warum Scoutify?",
+      items: [
+        { title: "Agilität", desc: "Wir bewegen uns schnell und passen uns noch schneller an." },
+        { title: "EU-Basiert", desc: "Gebaut für EU - USA Einstellungen." },
+        { title: "Innovativ", desc: "Wir bauen immer weiter." },
+        { title: "Sicher", desc: "Auf Azure gebaut, sicher durch Design." },
+        { title: "Reduzierung von Vorurteilen", desc: "Schwärzt personenbezogene Daten vor der Bewertung." },
+        { title: "Flexibel", desc: "Kein Lock-in, jederzeit kündbar." },
+        { title: "Intuitiv", desc: "Sauber, einfach und leicht." }
+      ]
+    },
+    origin: {
+      subtitle: "Von der Herausforderung zur Lösung",
+      title: "Internes Tool wurde zur Branchenlösung. Entwickelt mit Input von Branchenführern."
+    },
+    benefits: {
+      title: "Hauptvorteile",
+      items: [
+        { title: "Erreichen Sie mehr Talente", desc: "KI-optimierte Jobprofile erreichen mehr qualifizierte Kandidaten." },
+        { title: "Entdecken Sie verborgene Schätze", desc: "Entdecken Sie vielversprechende Kandidaten, die traditionelles Screening übersehen würde." },
+        { title: "Fairer Erfahrung", desc: "Reduzieren Sie unbewusste Vorurteile durch standardisierte Bewertungskriterien." },
+        { title: "Weniger Admin", desc: "Reduzieren Sie das Kandidaten-Screening um 90%." },
+        { title: "Mehr Wirkung", desc: "Konzentrieren Sie sich auf strategische Einstellungsentscheidungen." },
+        { title: "Plattformlösung", desc: "Keine Integration, intuitives Design, Wertschöpfung in Minuten." }
+      ]
+    },
+    ctaFooter: {
+      title: "Seien Sie Teil der Zukunft der Einstellung",
+      subtitle: "Schließen Sie sich zukunftsorientierten Unternehmen an, die ihren Einstellungsprozess mit KI-Erkenntnissen revolutionieren.",
+      button: "Jetzt starten"
+    },
+    inquiryForm: {
+      title: "Lassen Sie uns Ihre Talente finden",
+      subtitle: "Füllen Sie die Details unten aus und unser Team wird sich in Kürze bei Ihnen melden.",
+      sections: {
+        jobDetails: "Stellendetails",
+        contactDetails: "Kontaktdaten"
+      },
+      fields: {
+        positions: { label: "Welche Position(en) möchten Sie besetzen?", placeholder: "Position(en) eingeben" },
+        locations: { label: "An welchem Standort?", placeholder: "Standort(e) eingeben" },
+        count: { label: "Wie viele Arbeitskräfte suchen Sie pro Position?", placeholder: "Anzahl der Arbeitskräfte eingeben" },
+        message: { label: "Nachricht", placeholder: "Zusätzliche Details..." },
+        name: { label: "Vorname*" },
+        surname: { label: "Nachname*" },
+        phone: { label: "Handynummer*" },
+        company: { label: "Firmenname*" },
+        email: { label: "E-Mail*" }
+      },
+      submit: "Anfrage senden",
+      back: "Zurück zur Startseite"
+    },
+    privacy: {
+      title: "Datenschutzerklärung",
+      lastUpdated: "Zuletzt aktualisiert: Oktober 2023",
+      back: "Zurück zur Startseite",
+      sections: [
+        { title: "1. Informationen, die wir sammeln", content: "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, z. B. wenn Sie ein Konto erstellen, einen Job veröffentlichen oder sich auf eine Stelle bewerben." },
+        { title: "2. Wie wir Ihre Informationen verwenden", content: "Wir verwenden Ihre Informationen, um unsere Dienste bereitzustellen, zu warten und zu verbessern, einschließlich der Zusammenführung von Kandidaten und Arbeitgebern." },
+        { title: "3. Datensicherheit", content: "Wir setzen angemessene technische und organisatorische Maßnahmen um, um Ihre persönlichen Daten zu schützen." },
+        { title: "4. Ihre Rechte", content: "Sie haben das Recht auf Zugang, Korrektur oder Löschung Ihrer persönlichen Daten." }
+      ]
+    },
+    contact: {
+      title: "Kontaktieren Sie uns",
+      subtitle: "Haben Sie eine Frage oder benötigen Sie Unterstützung? Senden Sie uns eine Nachricht.",
+      fields: {
+        name: { label: "Name", placeholder: "Ihr Name" },
+        email: { label: "E-Mail", placeholder: "ihre@email.com" },
+        subject: { label: "Betreff", placeholder: "Worum geht es?" },
+        message: { label: "Nachricht", placeholder: "Wie können wir helfen?" }
+      },
+      submit: "Nachricht senden",
+      sending: "Senden...",
+      success: {
+        title: "Nachricht gesendet!",
+        message: "Danke, dass Sie uns kontaktiert haben. Wir melden uns in Kürze."
+      },
+      back: "Zurück zur Startseite"
+    },
+    footer: {
+      rights: "Scoutify. Alle Rechte vorbehalten.",
+      privacy: "Datenschutzerklärung",
       contact: "Kontakt"
     }
   }
